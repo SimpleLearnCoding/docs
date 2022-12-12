@@ -1,0 +1,20 @@
+{
+  "name": "@linnzh/docs",
+  "version": "1.0.0",
+  "description": "个人文档库",
+  "main": "index.js",
+  "author": "reg.linnzh@gmail.com",
+  "license": "Apache",
+  "repository": {
+    "type": "git"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.31",
+    "vue": "^3.2.45"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  }
+}
