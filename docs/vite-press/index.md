@@ -46,7 +46,9 @@ export default {
 
 See more usage: [Focus in code blocks](https://vitepress.vuejs.org/guide/markdown#focus-in-code-blocks).
 
-## I want to show my work <Badge type="danger" text="todo" />
+## I want to show my work <Badge type="tip" text="done" />
+
+<CarouselComponent></CarouselComponent>
 
 ## Badge
 

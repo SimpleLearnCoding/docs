@@ -33,7 +33,20 @@ export default {
                     }
                 ]
             },
-            {text: 'Frontend', link: '/vite-press/index'},
+            {
+                text: 'Frontend',
+                items: [
+                    {
+                        text: 'Vite Press', link: '/vite-press/index',
+                    },
+                    {
+                        text: 'Use Third-Party Component', link: '/vite-press/how-use-third-party-components',
+                    },
+                    {
+                        text: 'Carousel', link: '/vite-press/carousel',
+                    },
+                ]
+            },
             {text: 'GitHub', link: 'https://github.com/linnzh'}
         ],
         /**
