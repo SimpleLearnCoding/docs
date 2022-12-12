@@ -9,6 +9,7 @@
     "type": "git"
   },
   "devDependencies": {
+    "@arco-design/web-vue": "^2.40.0",
     "vitepress": "^1.0.0-alpha.31",
     "vue": "^3.2.45"
   },
