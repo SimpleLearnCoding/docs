@@ -1,7 +1,8 @@
 ---
-title: Markdown demo 
-lang: zh-CN 
-editLink: true
+title: Markdown demo lang: zh-CN editLink: true
+
+prev: 'Get Started' next: 'Demo'
+
 ---
 
 # Hello Vite Press
@@ -42,3 +43,14 @@ export default {
 
 See more usage: [Focus in code blocks](https://vitepress.vuejs.org/guide/markdown#focus-in-code-blocks).
 
+## I want to show my work <Badge type="danger" text="todo" />
+
+## Badge
+
+> See more details: [Theme badge](https://vitepress.vuejs.org/guide/theme-badge)
+
+### Demo <Badge type="tip" text="official" />
+
+```js
+<Badge type="tip" text="official"/>
+```
