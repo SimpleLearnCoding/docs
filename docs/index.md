@@ -1,7 +1,8 @@
 ---
 title: Markdown demo lang: zh-CN editLink: true
 
-prev: 'Get Started' next: 'Demo'
+prev: 'Get Started' 
+next: 'Demo'
 
 ---
 
