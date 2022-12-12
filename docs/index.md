@@ -1,59 +1,32 @@
 ---
-title: Markdown demo 
-lang: zh-CN 
-editLink: true
+layout: home
+title: Simple Learning
 
-prev: 'Get Started' 
-next: 'Demo'
+hero:
+  name: Simple Learning
+  text: 个人文档库，包括编码学习过程的记录、项目演示等。
+  tagline: Blog, demo, and so on.
+  image:
+    src: /logo.png
+    alt: Linnzh
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /guide/what-is-vitepress
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/SimpleLearnCoding
 
+features:
+  - title: Blog
+    details: 个人文档库，包括编码学习过程的记录、项目演示等
+    link: https://github.com/SimpleLearnCoding/demo
+  - title: Backend
+    details: 后端学习及踩坑记录
+    link: https://github.com/SimpleLearnCoding/demo
+  - title: Other
+    details: 其他杂项记录
+    link: https://github.com/SimpleLearnCoding/demo
 ---
 
-# Hello Vite Press
 
-> For more Markdown syntax see: [Markdown Extensions](https://vitepress.vuejs.org/guide/markdown)
-
-
-[[toc]]
-
-## Container Box
-
-::: info This is an info box.[Gray]
-
-There are other types of boxes: Tip, warning, danger, details.
-:::
-
-## Syntax Highlighting
-
-```typescript
-export default {
-    data() {
-        return {
-            msg: 'Highlighted!'
-        }
-    }
-}
-```
-
-```typescript{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!', // Highlight the current row
-    }
-  }
-}
-```
-
-See more usage: [Focus in code blocks](https://vitepress.vuejs.org/guide/markdown#focus-in-code-blocks).
-
-## I want to show my work <Badge type="danger" text="todo" />
-
-## Badge
-
-> See more details: [Theme badge](https://vitepress.vuejs.org/guide/theme-badge)
-
-### Demo <Badge type="tip" text="official" />
-
-```js
-<Badge type="tip" text="official"/>
-```

@@ -3,7 +3,7 @@
  */
 export default {
     appearance: true,
-    title: 'Docs of linnzh',
+    title: 'Learning',
     description: '文档库',
     base: '',
     lang: 'zh-CN',
@@ -33,7 +33,7 @@ export default {
                     }
                 ]
             },
-            {text: 'Frontend', link: '/'},
+            {text: 'Frontend', link: '/vite-press/index'},
             {text: 'GitHub', link: 'https://github.com/linnzh'}
         ],
         /**
