@@ -7,7 +7,7 @@ import DefaultTheme from 'vitepress/theme';
  * @link https://arco.design/vue/docs/start
  */
 import ArcoVue from "@arco-design/web-vue";
-import ArcoVueIcon from "@arco-design/web-vue/es/icon";
+// import ArcoVueIcon from "@arco-design/web-vue/es/icon";
 import '@arco-design/web-vue/dist/arco.css'; // required!!!
 import CarouselComponent from '../../components/CarouselComponent.vue';
 
@@ -18,7 +18,7 @@ export default {
 
     // 引入第三方组件
     ctx.app.use(ArcoVue);
-    ctx.app.use(ArcoVueIcon);
+    // ctx.app.use(ArcoVueIcon);
 
     /**
      * 注册全局组件
