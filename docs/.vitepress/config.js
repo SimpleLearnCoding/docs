@@ -30,6 +30,9 @@ export default {
                     },
                     {
                         text: 'Hyperf', link: '/backend/hyperf',
+                    },
+                    {
+                        text: 'MongoDB', link: '/mongo/Get-started',
                     }
                 ]
             },
