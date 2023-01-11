@@ -353,8 +353,9 @@ db.users.updateOne(
 
 /**
  * 查看该用户发布的帖子
- * /
-db.users.find({_id: 1}, {posts: 1}).pretty()
+ * 数组格式
+ */
+db.users.find({_id: 1}, {posts: 1}).limit(1).pretty()
 ```
 
 #### 多个用户对某个帖子进行了点赞
@@ -383,6 +384,57 @@ db.users.updateOne(
 
 ```js
 db.users.likes.insertOne({
-    post:
+    post: 1,
+    user: 1
 })
+
+// 查询时检查符合条件的数量即可
+db.users.likes.find({post: 1, user: 1}, {_id: 1}).count()
+```
+
+##### Idea 2
+
+或者是把用户点赞过的帖子ID收集在 users 中：
+
+```js
+// 点赞一个帖子
+db.users.updateOne(
+	{_id: 1},
+    {
+        $push: {
+            like_posts: 1
+        }
+    }
+)
+
+/**
+ * 	继续点赞
+ */
+db.users.updateOne(
+	{_id: 1},
+    {
+        $push: {
+            like_posts: {
+                $each: [2, 3]
+            }
+        }
+    }
+)
+```
+
+如果要在本帖中查询当前用户是否点赞，则直接查询点赞的帖子ID是否存在即可：
+
+```js
+/**
+ * 这里使用了 $in 查询操作
+ * @link https://www.mongodb.com/docs/manual/reference/operator/query/in/
+ */
+db.users.find(
+	{
+        _id: 1,
+        like_posts: {
+            $in: [1]
+        }
+    }
+).count() == 1
 ```
