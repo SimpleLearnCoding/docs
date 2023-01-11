@@ -13,7 +13,7 @@ export default {
         theme: 'material-palenight',
         lineNumbers: true
     },
-    outDir: './.vitepress/dist',
+    outDir: './../dist',
     cleanUrls: 'with-subfolders',
 
     themeConfig: {
