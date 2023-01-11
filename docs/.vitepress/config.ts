@@ -1,7 +1,10 @@
+import {defineConfig} from "vitepress";
+
 /**
  * @link https://vitepress.vuejs.org/config/app-configs
+ * @link https://vitepress.vuejs.org/config/introduction
  */
-export default {
+export default defineConfig ({
     appearance: true,
     title: 'Learning',
     description: '文档库',
@@ -98,4 +101,4 @@ export default {
             copyright: 'Copyright © 2022-present <a href="https://github.com/Linnzh">Linnzh</a>'
         },
     }
-}
+})
