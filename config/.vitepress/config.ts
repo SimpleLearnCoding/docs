@@ -16,7 +16,15 @@ export default defineConfig ({
         theme: 'material-palenight',
         lineNumbers: true
     },
+    /**
+     * 定义文档目录位置
+     */
+    srcDir: './../docs',
+    /**
+     * 定义构建时输出目录
+     */
     outDir: './../dist',
+
     cleanUrls: 'with-subfolders',
 
     themeConfig: {
