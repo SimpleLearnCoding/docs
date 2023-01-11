@@ -9,7 +9,7 @@ import DefaultTheme from 'vitepress/theme';
 import ArcoVue from "@arco-design/web-vue";
 // import ArcoVueIcon from "@arco-design/web-vue/es/icon";
 import '@arco-design/web-vue/dist/arco.css'; // required!!!
-import CarouselComponent from '../../components/CarouselComponent.vue';
+import CarouselComponent from '../../../src/components/CarouselComponent.vue';
 
 export default {
   ...DefaultTheme,
