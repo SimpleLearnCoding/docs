@@ -62,6 +62,14 @@ export default defineConfig ({
                     },
                 ]
             },
+            {
+                text: 'Geek time',
+                items: [
+                    {
+                        text: '从《代码之丑》专栏了解好代码', link: '/geektime/early-code',
+                    },
+                ]
+            },
             {text: 'GitHub', link: 'https://github.com/linnzh'}
         ],
         /**
