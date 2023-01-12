@@ -99,6 +99,9 @@ export default defineConfig ({
                     {
                         text: '设计模式', link: '/other/design-patterns',
                     },
+                    {
+                        text: '数据分析 - 入门', link: '/other/data-analysis-start',
+                    },
                 ],
                 collapsible: true,
                 collapsed: true,
