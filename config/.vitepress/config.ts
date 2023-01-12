@@ -33,6 +33,7 @@ export default defineConfig ({
          * @link https://vitepress.vuejs.org/guide/theme-nav#navigation-links
          */
         nav: [
+            {text: 'Guide', link: '/mongo/Get-started'},
             {
                 text: 'Backend',
                 items: [
@@ -69,21 +70,25 @@ export default defineConfig ({
          */
         sidebar: [
             {
-                text: 'Works',
+                text: 'PHP',
                 items: [
                     {
-                        text: 'Demo A', link: '/works/demo/a',
-                    },
-                    {
-                        text: 'Demo B', link: '/works/demo/a',
-                    },
-                    {
-                        text: 'Demo C', link: '/works/demo/a',
+                        text: 'ThinkPHP - FAQ', link: '/thinkphp/',
                     },
                 ],
-                collapsible: true,// 可展开/折叠
-                collapsed: true,// 默认折叠
-            }
+                collapsible: true,// 是否可折叠
+                collapsed: false,// 是否折叠
+            },
+            {
+                text: 'Other',
+                items: [
+                    {
+                        text: 'AES 加解密算法', link: '/other/AesEncrypt',
+                    },
+                ],
+                collapsible: true,
+                collapsed: false,
+            },
         ],
         /**
          * 编辑链接
