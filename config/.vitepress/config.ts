@@ -70,7 +70,7 @@ export default defineConfig ({
                     },
                     {
                         text: '摘抄 - 遗留系统现代化实战', link: '/geektime/modernization-of-legacy-systems.md'
-                    }
+                    },
                 ]
             },
             {text: 'GitHub', link: 'https://github.com/linnzh'}
@@ -95,6 +95,9 @@ export default defineConfig ({
                 items: [
                     {
                         text: 'AES 加解密算法', link: '/other/crypto-aes-encrypt',
+                    },
+                    {
+                        text: '设计模式', link: '/other/design-patterns',
                     },
                 ],
                 collapsible: true,
