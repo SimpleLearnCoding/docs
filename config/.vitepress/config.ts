@@ -68,6 +68,9 @@ export default defineConfig ({
                     {
                         text: '从《代码之丑》专栏了解好代码', link: '/geektime/early-code',
                     },
+                    {
+                        text: '摘抄 - 遗留系统现代化实战', link: '/geektime/modernization-of-legacy-systems.md'
+                    }
                 ]
             },
             {text: 'GitHub', link: 'https://github.com/linnzh'}
