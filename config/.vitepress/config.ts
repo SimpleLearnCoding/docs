@@ -33,7 +33,7 @@ export default defineConfig ({
          * @link https://vitepress.vuejs.org/guide/theme-nav#navigation-links
          */
         nav: [
-            {text: 'Guide', link: '/mongo/Get-started'},
+            {text: 'Guide', link: '/mongo/get-started'},
             {
                 text: 'Backend',
                 items: [
@@ -44,7 +44,7 @@ export default defineConfig ({
                         text: 'Hyperf', link: '/backend/hyperf',
                     },
                     {
-                        text: 'MongoDB', link: '/mongo/Get-started',
+                        text: 'MongoDB', link: '/mongo/get-started',
                     }
                 ]
             },
@@ -83,7 +83,7 @@ export default defineConfig ({
                 text: 'Other',
                 items: [
                     {
-                        text: 'AES 加解密算法', link: '/other/AesEncrypt',
+                        text: 'AES 加解密算法', link: '/other/crypto-aes-encrypt',
                     },
                 ],
                 collapsible: true,
