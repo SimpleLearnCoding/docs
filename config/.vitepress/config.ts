@@ -76,8 +76,8 @@ export default defineConfig ({
                         text: 'ThinkPHP - FAQ', link: '/thinkphp/',
                     },
                 ],
-                collapsible: true,// 是否可折叠
-                collapsed: false,// 是否折叠
+                collapsible: true,
+                collapsed: false,
             },
             {
                 text: 'Other',
@@ -87,7 +87,17 @@ export default defineConfig ({
                     },
                 ],
                 collapsible: true,
-                collapsed: false,
+                collapsed: true,
+            },
+            {
+                text: 'CI/CD',
+                items: [
+                    {
+                        text: '使用 Pipeline 自动构建并部署 - 以 Gitee 为例', link: '/deploy/GiteeCI',
+                    },
+                ],
+                collapsible: true,
+                collapsed: true,
             },
         ],
         /**
