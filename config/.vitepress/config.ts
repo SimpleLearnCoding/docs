@@ -108,6 +108,9 @@ export default defineConfig ({
                     {
                         text: 'MySQL', link: '/db/mysql-get-started',
                     },
+                    {
+                        text: 'Redis 基础', link: '/db/redis-basic',
+                    },
                 ],
                 collapsible: true,
                 collapsed: true,
