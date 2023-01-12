@@ -102,6 +102,9 @@ export default defineConfig ({
                     {
                         text: '数据分析 - 入门', link: '/other/data-analysis-start',
                     },
+                    {
+                        text: '消息队列 - 基础', link: '/other/message-queue-basic',
+                    },
                 ],
                 collapsible: true,
                 collapsed: true,
