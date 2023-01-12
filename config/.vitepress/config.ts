@@ -93,7 +93,10 @@ export default defineConfig ({
                 text: 'CI/CD',
                 items: [
                     {
-                        text: '使用 Pipeline 自动构建并部署 - 以 Gitee 为例', link: '/deploy/GiteeCI',
+                        text: '使用 Pipeline 自动构建并部署 - 以 Gitee 为例', link: '/deploy/gitee-pipeline',
+                    },
+                    {
+                        text: 'Vite Press 在 GitHub 上的发布', link: '/deploy/github-vite-press',
                     },
                 ],
                 collapsible: true,
