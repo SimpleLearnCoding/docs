@@ -69,7 +69,10 @@ export default defineConfig ({
                         text: '从《代码之丑》专栏了解好代码', link: '/geektime/early-code',
                     },
                     {
-                        text: '摘抄 - 遗留系统现代化实战', link: '/geektime/modernization-of-legacy-systems.md'
+                        text: '摘抄 - 遗留系统现代化实战', link: '/geektime/modernization-of-legacy-systems'
+                    },
+                    {
+                        text: '摘抄 - TDD 项目实战 70 讲', link: '/geektime/tdd-project-70-course'
                     },
                 ]
             },
