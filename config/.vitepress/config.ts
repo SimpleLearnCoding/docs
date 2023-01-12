@@ -105,6 +105,9 @@ export default defineConfig ({
                     {
                         text: '消息队列 - 基础', link: '/other/message-queue-basic',
                     },
+                    {
+                        text: 'MySQL', link: '/db/mysql-get-started',
+                    },
                 ],
                 collapsible: true,
                 collapsed: true,
