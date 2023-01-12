@@ -108,7 +108,7 @@
 
 
 
-## 算法实现 - PHP 版本
+## 算法实现 - PHP
 
 
 
@@ -245,7 +245,7 @@ class Aes
 
 
 
-### Usage
+### Usage & Test
 
 
 
@@ -301,4 +301,110 @@ class AesTest extends TestCase
         $this->assertEquals($this->message, $message, '解密不符合预期');
     }
 }
+```
+
+## 算法实现 - Typescript by Angular
+
+
+::: warning
+当前方案使用 Angular 13 实现，暂未实现添加 iv 的功能，仅做参考示例
+:::
+
+### Service 定义
+
+```typescript
+import { Injectable } from '@angular/core';
+import * as CryptoJS from 'crypto-js';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AesService {
+  constructor() { }
+
+  private buildCfg(iv: string) {
+    return {
+      algorithm: CryptoJS.algo.AES,
+      padding: CryptoJS.pad.Pkcs7,
+      mode: CryptoJS.mode.CBC,
+      iv: CryptoJS.enc.Utf8.parse(iv),
+    };
+  }
+
+  /**
+   * @description 加密
+   * @param {string} message 待加密文本
+   * @param {string} secret  加密密码
+   * @param {string} iv      偏移量
+   * @return {string}        加密后文本
+   * @memberof AesService
+   */
+  encrypt(message: string, secret: string, iv: string): string {
+    // 参数需要经过 utf8 解析为 WordArray 类型
+    const text = CryptoJS.enc.Utf8.parse(message);
+
+    const key = CryptoJS.enc.Utf8.parse(secret);
+
+    const result = CryptoJS.AES.encrypt(text, key, this.buildCfg(iv));
+
+    console.debug(result.toString());
+
+    return result.toString();
+  }
+
+  /**
+   * @description 解密
+   * @param {string} ciphertext 待解密文本
+   * @param {string} secret     加密密码
+   * @param {string} iv         偏移量
+   * @return {string}           解密后文本
+   * @memberof AesService
+   */
+  decrypt(ciphertext: string, secret: string, iv: string): string {
+    const key = CryptoJS.enc.Utf8.parse(secret);
+
+    const result = CryptoJS.AES.decrypt(ciphertext, key, this.buildCfg(iv));
+
+    return result.toString(CryptoJS.enc.Utf8);
+  }
+}
+```
+
+
+
+#### 测试
+
+```typescript
+import { TestBed } from '@angular/core/testing';
+
+import { AesService } from './aes.service';
+
+describe('AesTService', () => {
+  let service: AesService;
+
+  const message = '{"customer_id":67,"phone_number":"18124767837","age":101,"gender":"","platform":"","phone_value":6103.087707406019,"phone_model":"iPhone10,2","identification_type":"PRC ID","first_withdrawal_channel":"","contact_count":0,"loan_app_count":32,"social_app_count":72,"risk_id":11,"telcon_score":6000,"network":""}';
+  const key = '425605BC99DE6D13';
+  const iv = '9diplawrema';
+  const ciphertext = 'JeJgsE5wthHAPb7DfxQmG8sPmfj9XFpzWGoHOmriJP/BoAoHk8slLqG6T3BwRk4LannPltyE9MkUXCgLRlXdgPUcmNxHFqYJRw9/WE99iYLCJ62plVuN0Gpj5h1ozIa2cIGbiMOk9iWUSEoD23SgkcYa3cDP971Z1gHyDzYE6J3KUW8y3Tsl7UMCYPpRmSN52N1SwPXdynzcql2WRmy9WFszbJBXAYWVpalvFj5TcGnBCnNGIO6m2eq+wEpqjxKjwO3Wn2SJuH5Ji116PLzuAX+NExCqTgCYZxC5EXXRgPDp/4CdlXq1KedaYiyHUJ25PwpgQ8zRS197DDa+CdFvP7sfk5C2EVvCxQt1cDram4b+pt6t6unnrX2JZlyPJP+2c4kgsdr9YBhycfzo7O1KlJ7weMPUl/emo/ksSOGP7JA=';
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(AesService);
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+  it(`测试加密`, () => {
+    const encrypted = service.encrypt(message, key, iv);
+    expect(encrypted).toEqual(ciphertext);
+  })
+
+  it(`测试解密`, () => {
+    const encrypted = service.decrypt(ciphertext, key, iv);
+    expect(encrypted).toEqual(message);
+  })
+
+});
 ```
