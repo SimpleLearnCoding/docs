@@ -111,6 +111,9 @@ export default defineConfig ({
                     {
                         text: 'Redis 基础', link: '/db/redis-basic',
                     },
+                    {
+                        text: 'WEB 安全', link: '/other/web-security',
+                    },
                 ],
                 collapsible: true,
                 collapsed: true,
