@@ -60,6 +60,9 @@ export default defineConfig ({
                     {
                         text: 'Carousel', link: '/vite-press/carousel',
                     },
+                    {
+                        text: 'Node 镜像部署项目', link: '/docker/deploy-frontend',
+                    },
                 ]
             },
             {
