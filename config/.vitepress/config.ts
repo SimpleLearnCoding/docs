@@ -130,6 +130,9 @@ export default defineConfig ({
                     {
                         text: 'Vite Press 在 GitHub 上的发布', link: '/deploy/github-vite-press',
                     },
+                    {
+                        text: 'Node 镜像部署项目', link: '/docker/deploy-frontend',
+                    },
                 ],
                 collapsible: true,
                 collapsed: true,
