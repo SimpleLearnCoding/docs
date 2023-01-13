@@ -7,11 +7,11 @@
 > - [MongoDB 支持的方法](https://www.mongodb.com/docs/v6.0/reference/method/)
 
 
-### Docker Start
+## Docker Start
 
 
 
-#### Run
+### Run
 
 
 
@@ -42,7 +42,7 @@ $ docker run -it --rm \
 
 
 
-#### Enter
+### Enter
 
 
 
@@ -72,7 +72,7 @@ config   12.00 KiB
 local    72.00 KiB
 ```
 
-#### Connection
+### Connection
 
 
 
@@ -116,6 +116,7 @@ noexist    8.00 KiB
 ```
 
 ## Example
+
 
 
 用户（User）可在论坛（Forum）发布帖子（Post），任何用户均可对帖子进行以下操作：
@@ -182,12 +183,19 @@ post = {
 }
 ```
 
+
+
 ### Case 1 用户基本信息
 
+<br>
 
 #### 创建用户
 
+
+
 `db.user.insertMany([])`
+
+
 
 如下：
 
@@ -229,7 +237,11 @@ db.users.insertMany([
 ])
 ```
 
+
+
 #### 更新用户信息
+
+
 
 1. 添加 gender 属性，并根据 gender_desc 的值
 
@@ -253,7 +265,11 @@ db.users.updateMany(
 )
 ```
 
+
+
 #### 获取用户列表
+
+
 
 ```js
 db.users.count()
@@ -264,7 +280,11 @@ db.users.find({}).limit(10).pretty()
 db.users.find({gender: 1}).limit(10).pretty()
 ```
 
+
+
 #### 删除指定用户
+
+
 
 ```js
 
@@ -273,9 +293,15 @@ db.users.deleteOne({_id: 1})
 
 ```
 
+
+
 ### Case 2 用户发布帖子
 
+<br>
+
 #### 向指定用户添加一个 posts 属性承载其发布的所有帖子
+
+
 
 ```js
 db.users.insertOne(
@@ -358,9 +384,14 @@ db.users.updateOne(
 db.users.find({_id: 1}, {posts: 1}).limit(1).pretty()
 ```
 
+
+
 #### 多个用户对某个帖子进行了点赞
 
+
+
 此举将更新帖子的点赞数：
+
 
 ```js
 db.users.updateOne(
@@ -380,7 +411,9 @@ db.users.updateOne(
 )
 ```
 
+
 如果要在本帖中查询当前用户是否点赞，可记录一个「点赞文档」：
+
 
 ```js
 db.users.likes.insertOne({
@@ -392,9 +425,14 @@ db.users.likes.insertOne({
 db.users.likes.find({post: 1, user: 1}, {_id: 1}).count()
 ```
 
+
+
 ##### Idea 2
 
+
+
 或者是把用户点赞过的帖子ID收集在 users 中：
+
 
 ```js
 // 点赞一个帖子
@@ -422,7 +460,9 @@ db.users.updateOne(
 )
 ```
 
+
 如果要在本帖中查询当前用户是否点赞，则直接查询点赞的帖子ID是否存在即可：
+
 
 ```js
 /**
