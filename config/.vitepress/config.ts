@@ -109,6 +109,9 @@ export default defineConfig ({
                         text: '数据分析 - 入门', link: '/other/data-analysis-start',
                     },
                     {
+                        text: 'GitHub REST API 参考', link: '/other/restful-api-by-github',
+                    },
+                    {
                         text: '消息队列 - 基础', link: '/other/message-queue-basic',
                     },
                     {
