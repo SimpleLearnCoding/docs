@@ -139,6 +139,9 @@ export default defineConfig ({
                     {
                         text: 'Node 镜像部署项目', link: '/docker/deploy-frontend',
                     },
+                    {
+                        text: 'PHP 镜像部署项目 - 以 Hyperf 项目为例', link: '/docker/deploy-backend-by-php',
+                    },
                 ],
                 collapsible: true,
                 collapsed: true,
