@@ -45,7 +45,7 @@ export default defineConfig ({
                     },
                     {
                         text: 'MongoDB', link: '/mongo/get-started',
-                    }
+                    },
                 ]
             },
             {
@@ -62,6 +62,23 @@ export default defineConfig ({
                     },
                     {
                         text: 'Node 镜像部署项目', link: '/docker/deploy-frontend',
+                    },
+                ]
+            },
+            {
+                text: 'Getting Started',
+                items: [
+                    {
+                        text: 'Shell Script', link: '/getting-started/shell-script',
+                    },
+                    {
+                        text: 'MongoDB', link: '/mongo/get-started',
+                    },
+                    {
+                        text: 'MySQL', link: '/db/mysql-get-started',
+                    },
+                    {
+                        text: '数据分析', link: '/other/data-analysis-start',
                     },
                 ]
             },
@@ -106,16 +123,10 @@ export default defineConfig ({
                         text: '设计模式', link: '/other/design-patterns',
                     },
                     {
-                        text: '数据分析 - 入门', link: '/other/data-analysis-start',
-                    },
-                    {
                         text: 'GitHub REST API 参考', link: '/other/restful-api-by-github',
                     },
                     {
                         text: '消息队列 - 基础', link: '/other/message-queue-basic',
-                    },
-                    {
-                        text: 'MySQL', link: '/db/mysql-get-started',
                     },
                     {
                         text: 'Redis 基础', link: '/db/redis-basic',
