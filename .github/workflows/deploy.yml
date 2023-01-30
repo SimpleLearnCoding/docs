@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: yarn install --no-lockfile --frozen-lockfile
+      - run: yarn install --no-lockfile
 
       - name: Build
         run: yarn docs:build

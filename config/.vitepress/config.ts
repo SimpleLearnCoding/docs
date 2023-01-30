@@ -13,7 +13,7 @@ export default defineConfig ({
     ignoreDeadLinks: true,
     lastUpdated: true,
     markdown: {
-        theme: 'material-palenight',
+        theme: 'dracula',
         lineNumbers: true
     },
     /**
