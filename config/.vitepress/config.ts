@@ -35,16 +35,27 @@ export default defineConfig ({
         nav: [
             {text: 'Guide', link: '/mongo/get-started'},
             {
-                text: 'Backend',
+                text: 'Getting Started',
                 items: [
                     {
-                        text: 'ThinkPHP', link: '/backend/thinkphp',
-                    },
-                    {
-                        text: 'Hyperf', link: '/backend/hyperf',
+                        text: 'Shell Script', link: '/getting-started/shell-script',
                     },
                     {
                         text: 'MongoDB', link: '/mongo/get-started',
+                    },
+                    {
+                        text: 'MySQL', link: '/db/mysql-get-started',
+                    },
+                    {
+                        text: '数据分析', link: '/other/data-analysis-start',
+                    },
+                ]
+            },
+            {
+                text: 'Problem & Solution',
+                items: [
+                    {
+                        text: 'Vite Press build error', link: '/problem-and-solution/vitepress-build-error',
                     },
                 ]
             },
@@ -62,23 +73,6 @@ export default defineConfig ({
                     },
                     {
                         text: 'Node 镜像部署项目', link: '/docker/deploy-frontend',
-                    },
-                ]
-            },
-            {
-                text: 'Getting Started',
-                items: [
-                    {
-                        text: 'Shell Script', link: '/getting-started/shell-script',
-                    },
-                    {
-                        text: 'MongoDB', link: '/mongo/get-started',
-                    },
-                    {
-                        text: 'MySQL', link: '/db/mysql-get-started',
-                    },
-                    {
-                        text: '数据分析', link: '/other/data-analysis-start',
                     },
                 ]
             },
