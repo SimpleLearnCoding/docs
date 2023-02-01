@@ -57,6 +57,9 @@ export default defineConfig ({
                     {
                         text: 'Vite Press build error', link: '/problem-and-solution/vitepress-build-error',
                     },
+                    {
+                        text: 'ThinkPHP issues', link: '/problem-and-solution/thinkphp-issues',
+                    },
                 ]
             },
             {
@@ -100,9 +103,6 @@ export default defineConfig ({
             {
                 text: 'PHP',
                 items: [
-                    {
-                        text: 'ThinkPHP - FAQ', link: '/thinkphp/',
-                    },
                 ],
                 collapsible: true,
                 collapsed: false,
