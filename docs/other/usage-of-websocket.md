@@ -200,7 +200,7 @@ class IndexController extends BaseController
 
 此时，访问地址 <http://localhost:9091/index/websocket> 即可看到视图文件中定义的内容。此刻我们的 websocket 服务端代码还没有，因此控制台会抛出异常：
 
-```http
+```bash
 服务端错误： 
 error { target: WebSocket, isTrusted: true, srcElement: WebSocket, eventPhase: 0, bubbles: false, cancelable: false, returnValue: true, defaultPrevented: false, composed: false, timeStamp: 627, … }
 websocket:21:17
