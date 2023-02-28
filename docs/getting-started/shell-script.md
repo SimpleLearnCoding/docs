@@ -272,5 +272,38 @@ fi
 exit 0
 ```
 
+## Demo
 
+### 文件远程复制
+
+```shell
+#!/bin/bash
+
+REMOTE_PATH="/data/www/runtime/"
+LOCAL_PATH="/Users/$USER/logs"
+
+ENV=test
+if [ -n "$1" ]; then
+    ENV=$1
+fi
+
+if [ "$ENV" == 'prod' ];then
+    SERVER_USER=userName1
+    SERVER_HOST=prod.ap-southeast-1.compute.amazonaws.com
+elif [ "$ENV" == 'prev' ];then
+    SERVER_USER=userName2
+    SERVER_HOST=staging.ap-southeast-1.compute.amazonaws.com
+else
+    SERVER_USER=userName3
+    SERVER_HOST=test.ap-east-1.compute.amazonaws.com
+    REMOTE_PATH=/data/code/runtime/
+fi
+
+echo "当前拷贝环境：" $ENV " 正在拷贝日志文件至 " $LOCAL_PATH
+
+rsync -avzrm --ignore-existing --include="*.log" --exclude="*.php" \
+    $SERVER_USER@$SERVER_HOST:$REMOTE_PATH $LOCAL_PATH/$ENV
+
+exit 0
+```
 
