@@ -104,6 +104,9 @@ export default defineConfig ({
                 text: 'PHP',
                 items: [
                     {
+                        text: 'FAQ', link: '/other/faq',
+                    },
+                    {
                         text: 'Web Socket使用', link: '/other/usage-of-websocket',
                     },
                 ],
