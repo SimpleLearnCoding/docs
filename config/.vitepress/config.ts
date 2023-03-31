@@ -52,6 +52,14 @@ export default defineConfig ({
                 ]
             },
             {
+                text: 'Database',
+                items: [
+                    {
+                        text: 'MySQL主从架构', link: '/db/master-and-slave',
+                    },
+                ]
+            },
+            {
                 text: 'Problem & Solution',
                 items: [
                     {
